@@ -1,0 +1,385 @@
+:root {
+  --main-color-yellow: #fdca40;
+  --main-color-black: #080708;
+  --main-color-green: #349b60;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("../fonts/Inter-Regular.ttf") format("truetype");
+}
+
+body {
+  margin: 0;
+  font-family: "Inter";
+}
+
+/* navbar */
+.navbar-custom {
+  padding-top: 3rem;
+  background-color: white;
+}
+
+.navbar-custom .navbar-brand.logo-image img {
+  width: 175px;
+  height: 48px;
+}
+
+.navbar-custom .navbar-nav .nav-link {
+  margin: 0 20px;
+  color: var(--main-color-black);
+  font-weight: 500;
+  font-size: 18px;
+  font-family: "Inter";
+}
+
+.navbar-custom .navbar-nav .nav-link:hover {
+  color: var(--main-color-green);
+  text-decoration: underline;
+}
+
+.navbar-custom .navbar-toggler {
+  border: none;
+}
+
+.navbar-custom .navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.navbar-custom .navbar-collapse {
+  background-color: white;
+}
+
+.navbar-custom .navbar-toggler-awesome {
+  padding: 1rem;
+}
+
+/* bread-crumb */
+.bread-crumb {
+  margin-top: 10rem;
+}
+
+.bread-crumb span {
+  text-align: center;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 22px;
+  color: var(--main-color-black);
+  font-weight: 500;
+}
+
+.bread-crumb span:nth-child(2) {
+  opacity: 0.3;
+}
+
+.bread-crumb span + span:before {
+  content: "●";
+  padding: 8px;
+  font-size: 10px;
+}
+
+/* pricing  */
+.pricing {
+  padding-bottom: 12rem;
+}
+.pricing-header {
+  margin-top: 2.5rem;
+}
+
+.pricing-header h1 {
+  display: block;
+  font-weight: 700;
+  font-size: 56px;
+  color: var(--main-color-black);
+  line-height: 4rem;
+  text-align: center;
+}
+
+.pricing-header span {
+  margin-top: 12px;
+  display: block;
+  color: var(--main-color-black);
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  text-align: center;
+}
+
+@media (max-width: 576px) {
+  .pricing-header h1 {
+    font-size: 34px;
+  }
+}
+
+/* pricing-cards */
+.pricing-cards {
+  margin-top: 5rem;
+}
+
+.pricing-cards .pricing-card-item {
+  margin: 0.5rem;
+  padding: 2rem;
+  background-color: var(--main-color-green);
+  border-radius: 1rem;
+  color: white;
+}
+
+.pricing-cards .pricing-card-item h3 {
+  margin: 1.25rem 0;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.pricing-cards .pricing-card-item ul li {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+@media (min-width: 768px) and (max-width: 1199.98px) {
+  .pricing-cards .pricing-card-item {
+    height: 360px;
+  }
+}
+
+/* pricing-video */
+
+.pricing-video {
+  margin-top: 10rem;
+}
+
+.pricing-video h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 3rem;
+  color: var(--main-color-black);
+  margin-bottom: 1rem;
+}
+
+.pricing-video span {
+  display: block;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: var(--main-color-black);
+  margin-bottom: 2.5rem;
+}
+
+.pricing-video .pricing-video-image {
+  position: relative;
+  z-index: 1;
+  height: 22rem;
+}
+
+.pricing-video .pricing-video-image img {
+  width: 100%;
+  height: inherit;
+}
+
+.pricing-video-image .img-play {
+  position: absolute;
+  width: 5.5rem;
+  height: 5.5rem;
+  z-index: 2;
+  left: 50%;
+  top: 50%;
+  translate: -50% -50%;
+}
+
+@media (max-width:768px) {
+  .pricing-video h1{
+    font-size: 2rem;
+  }
+  .pricing-video .pricing-video-image {
+    height: 15rem;
+  }
+  .pricing{
+    padding-bottom: 8rem;
+  }
+}
+
+/* schedule */
+.schedule {
+  background-color: var(--main-color-green);
+  padding: 6rem 0.5rem;
+}
+
+.schedule-content h1{ 
+  color: white;
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.schedule-content p{
+  color:white;
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 36px;
+}
+
+.line-container {
+  display: flex;
+  position: relative;
+  width: 100%;
+  background: white;
+  height: 2px;
+  justify-content: space-between;
+  margin-bottom: 64px;
+  z-index: 1;
+}
+
+.line-container .status {
+  position: relative;
+  top: -10px;
+}
+
+.line-container .dot {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid white;
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+}
+
+.line-container .status:first-child .dot{
+  float: left !important;
+}
+
+.line-container .status:nth-child(2) .dot{
+  float: right !important;
+  background-color: var(--main-color-green) !important;
+}
+
+.dot-intial {
+  background-color: var(--main-color-yellow) !important;
+  border-color:var(--main-color-yellow) !important;
+}
+
+.dot-text {
+  color: white;
+  margin-top: 2rem;
+}
+
+.btn-choose-schedule {
+  margin: 24px 0;
+  padding: 24px;
+  background: white;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+}
+
+.btn-choose-schedule .btn-circle {
+  margin-right:24px;
+  width: 24px;
+  height: 24px;
+  border: 2px solid var(--main-color-green);
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.btn-choose-schedule span{
+  display: block;
+}
+
+.schedule-step {
+  display: block;
+  color: var(--main-color-black);
+  background-color: var(--main-color-yellow);
+  padding: 14px 32px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  max-width: 150px;
+}
+
+.image-container {
+  text-align: center;
+  padding-bottom: 40px;
+}
+
+/* footer */
+
+.footer {
+  margin-top: 150px;
+}
+
+.slide-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 32px 0;
+}
+
+.slide-header h1{
+  font-size: 40px;
+  line-height: 48px;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+
+.slide-header .view-all-news{
+  display: block;
+  border-radius: 10px;
+  border:1px solid var(--main-color-green);
+  padding: 14px 32px;
+  color: var(--main-color-green);
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  text-align: center;
+  max-width: 180px;
+}
+
+.article-card {
+  padding: 1rem 0;
+  box-shadow: 0px 4px 4px rgba(242, 244, 248, 0.75);
+}
+.article-card .article-image img{
+  width: 100%;
+}
+
+.article-card .article-content {
+  padding: 1.25rem 1rem;
+}
+
+.article-card .created-date {
+  font-size: 14px;
+  font-weight: 500;
+  opacity: 0.2;
+  line-height: 22px;
+  color:var(--main-color-black);
+}
+
+.article-card .title {
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 700;
+  color: var(--main-color-black);
+}
+
+.article-card .content {
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 400;
+  color: var(--main-color-black);
+}
+
+.article-card .article-content .detail {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--main-color-green);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+@media (max-width:768px) {
+  .view-all-news{
+    display: none !important;
+  }
+}
